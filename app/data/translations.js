@@ -136,7 +136,10 @@ export const productsTranslations = {
         priceAsc: "Qiymət (Artan)",
         priceDesc: "Qiymət (Azalan)",
         sizeAsc: "Sahə (Artan)",
-        sizeDesc: "Sahə (Azalan)"
+        sizeDesc: "Sahə (Azalan)",
+        bestSellersTitle: "Ən Çox Satılan Evlərimiz",
+        bestSellersSubtitle: "Müştərilərimizin ən çox bəyəndiyi layihələr",
+        viewAll: "Bütün Məhsullar"
     },
     ru: {
         title: "Наши Продукты",
@@ -154,7 +157,10 @@ export const productsTranslations = {
         priceAsc: "Цена (По возрастанию)",
         priceDesc: "Цена (По убыванию)",
         sizeAsc: "Площадь (По возрастанию)",
-        sizeDesc: "Площадь (По убыванию)"
+        sizeDesc: "Площадь (По убыванию)",
+        bestSellersTitle: "Наши Бестселлеры",
+        bestSellersSubtitle: "Самые популярные проекты среди наших клиентов",
+        viewAll: "Все Продукты"
     }
 };
 
