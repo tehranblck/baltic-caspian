@@ -40,7 +40,7 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Caspian Baltic | Tahta Evlər',
+    title: 'Caspian Baltic | Taxta Evlər',
     description: 'Yüksək keyfiyyətli taxta evlər istehsalçısı',
     url: 'https://caspianbaltic.com',
     siteName: 'Caspian Baltic',
@@ -49,7 +49,7 @@ export const metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Caspian Baltic Tahta Evlər',
+        alt: 'Caspian Baltic Taxta Evlər',
       },
     ],
     locale: 'az_AZ',
