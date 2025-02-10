@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import Image from 'next/image';
 import { useState } from 'react';
 import { HiOutlineHome, HiOutlineScale, HiOutlineUsers } from 'react-icons/hi';
+import { FaWhatsapp } from 'react-icons/fa';
 import { translations } from '../data/products';
 
 export default function ProductDetail({ product }) {
@@ -24,6 +25,18 @@ export default function ProductDetail({ product }) {
         construction: product?.specifications?.construction?.[language] || '',
         buildTime: product?.specifications?.buildTime?.[language] || ''
     };
+
+    // WhatsApp mesajını hazırla
+    const createWhatsAppMessage = () => {
+        const message = language === 'az'
+            ? `Salam, mən ${name} haqqında məlumat almaq istəyirəm.\n\nMəhsul detalları:\n- Sahə: ${size}m²\n- Otaq sayı: ${rooms}\n- Qiymət: ${price}`
+            : `Здравствуйте, я хочу получить информацию о ${name}.\n\nДетали продукта:\n- Площадь: ${size}m²\n- Количество комнат: ${rooms}\n- Цена: ${price}`;
+
+        return encodeURIComponent(message);
+    };
+
+    // WhatsApp linki oluştur
+    const whatsappLink = `https://wa.me/994553221109?text=${createWhatsAppMessage()}`;
 
     return (
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -125,9 +138,15 @@ export default function ProductDetail({ product }) {
                             <div className="text-3xl font-bold text-green-800">
                                 {price}
                             </div>
-                            <button className="bg-green-800 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition">
+                            <a
+                                href={whatsappLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 bg-green-800 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition transform hover:-translate-y-1"
+                            >
+                                <FaWhatsapp className="w-5 h-5" />
                                 {t.contact}
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
