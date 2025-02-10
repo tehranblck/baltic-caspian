@@ -38,11 +38,12 @@ export default function Header() {
 
     return (
         <header className="bg-white shadow-md fixed w-full top-0 z-50">
-            <nav className="container mx-auto px-4 py-4" ref={menuRef}>
+            <nav className="container mx-auto px-4" ref={menuRef}>
                 <div className="flex items-center justify-between">
                     <Link href="/" className="text-2xl font-bold text-green-800">
-                        <Image src="/logo.svg" alt="logo" width={50} height={50} />
+                        <Image src="/logo.svg" priority quality={100} alt="logo" width={150} height={150} />
                     </Link>
+
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-8">

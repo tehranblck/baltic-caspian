@@ -9,7 +9,7 @@ const translations = {
         title: "Caspian Baltic Haqqında",
         subtitle: "Keyfiyyətli Taxta Evlər",
         description: "2015-ci ildən bəri Azərbaycanda fəaliyyət göstərən Caspian Baltic şirkəti, müasir texnologiya və ənənəvi sənətkarlığı birləşdirərək ən yüksək keyfiyyətli taxta evlər istehsal edir.",
-        experience: "İllər təcrübə",
+        experience: "İl təcrübə",
         projects: "Tamamlanmış layihə",
         clients: "Məmnun müştəri",
         quality: "Keyfiyyət zəmanəti",

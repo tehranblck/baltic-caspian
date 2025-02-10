@@ -4,6 +4,8 @@ import { useLanguage } from '../context/LanguageContext';
 import { footerTranslations } from '../data/translations';
 import Link from 'next/link';
 import { HiOutlinePhone, HiOutlineMail, HiOutlineGlobeAlt, HiOutlineLocationMarker } from 'react-icons/hi';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function Footer() {
     const { language } = useLanguage();
@@ -77,10 +79,41 @@ export default function Footer() {
                         </div>
                     </div>
 
+                    {/* Social Media Section - Contact Info kısmından sonra ekleyin */}
+                    <div>
+                        <h3 className="text-xl font-bold mb-4">{t.social}</h3>
+                        <div className="flex space-x-6">
+                            <a
+                                href="https://www.instagram.com/taxta_evlerin_tikintisi_mmc/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-white transition group"
+                            >
+                                <FaInstagram className="w-6 h-6" />
+                            </a>
+                            <a
+                                href="https://www.facebook.com/p/BALTIC-CASPIAN-taxta-evlerin-tikintisi-100065037902605/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-white transition group"
+                            >
+                                <FaFacebook className="w-6 h-6" />
+                            </a>
+                            <a
+                                href="https://wa.me/994553221109"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-white transition group"
+                            >
+                                <FaWhatsapp className="w-6 h-6" />
+                            </a>
+                        </div>
+                    </div>
+
                     {/* Working Hours */}
                     <div>
                         <h3 className="text-xl font-bold mb-4">Caspian Baltic</h3>
-                        <img src="/logo.png" alt="Caspian Baltic" className="w-32 mb-4" />
+                        <Image src="/logo.svg" width={150} height={150} alt="Caspian Baltic" className="w-32 mb-4" />
                         <p className="text-gray-400">
                             {language === 'az' ? 'Sibir şamından hazırlanmış keyfiyyətli taxta evlər' : 'Качественные деревянные дома из сибирской сосны'}
                         </p>
@@ -88,10 +121,39 @@ export default function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="border-t border-gray-800 pt-8 mt-8 text-center">
-                    <p className="text-gray-400">
-                        © {new Date().getFullYear()} Caspian Baltic. {t.rights}
-                    </p>
+                <div className="border-t border-gray-800 pt-8 mt-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-gray-400">
+                            © {new Date().getFullYear()} Caspian Baltic. {t.rights}
+                        </p>
+                        {/* Social Media Icons - Mobile */}
+                        <div className="flex items-center space-x-6 md:hidden">
+                            <a
+                                href="https://www.instagram.com/taxta_evlerin_tikintisi_mmc/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-white transition"
+                            >
+                                <FaInstagram className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://www.facebook.com/p/BALTIC-CASPIAN-taxta-evlerin-tikintisi-100065037902605/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-white transition"
+                            >
+                                <FaFacebook className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://wa.me/994553221109"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-white transition"
+                            >
+                                <FaWhatsapp className="w-5 h-5" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

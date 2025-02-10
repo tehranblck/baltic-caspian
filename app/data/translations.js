@@ -6,7 +6,7 @@ export const aboutTranslations = {
         description1: "2015-ci ildən bəri Caspian Baltic şirkəti, müasir texnologiya və ənənəvi sənətkarlığı birləşdirərək ən yüksək keyfiyyətli taxta evlər istehsal edir.",
         description2: "Biz hər bir layihəyə fərdi yanaşırıq və müştərilərimizin istəklərinə uyğun həllər təklif edirik. Təcrübəli komandamız və yüksək keyfiyyətli materiallarımızla sizin xəyalınızdakı evi reallaşdırırıq.",
         stats: {
-            experience: "İllər təcrübə",
+            experience: "İl təcrübə",
             projects: "Tamamlanmış layihə",
             clients: "Məmnun müştəri",
             team: "Peşəkar işçi"
@@ -101,7 +101,9 @@ export const footerTranslations = {
             products: "Məhsullar",
             about: "Haqqımızda",
             contact: "Əlaqə"
-        }
+        },
+        social: "Sosial Media",
+        followUs: "Bizi izləyin",
     },
     ru: {
         about: "О нас",
@@ -121,7 +123,9 @@ export const footerTranslations = {
             products: "Продукты",
             about: "О нас",
             contact: "Контакты"
-        }
+        },
+        social: "Социальные сети",
+        followUs: "Подписывайтесь на нас",
     }
 };
 
@@ -209,7 +213,7 @@ export const homeTranslations = {
                 "Restoran",
                 "Besedka",
                 "Uşaq oyun evləri",
-                "Katfeclər",
+                "Kateclər",
                 "Rus hamamı",
                 "Sauna"
             ]
@@ -218,9 +222,9 @@ export const homeTranslations = {
             title: "Texniki Xüsusiyyətlər",
             items: [
                 "Sibir şamı emal olunub, antiseptik vasitələrlə suya davamlı hala salınır",
-                "Su bazlı boya ilə renglenir",
-                "Taxtalara qurd, bocək, çat düşmür",
-                "Rixter cədvəli ilə 9 və yuxarı bal gücündə zəlzələyə davamli",
+                "Su bazlı boya ilə rənglənir",
+                "Taxtalara qurd, böcək, çat düşmür",
+                "Rixter cədvəli ilə 9 və yuxarı bal gücündə zəlzələyə davamlı",
                 "Evlərin ömrü 150 – 300 il"
             ],
             conclusion: "Beləliklə təbiət ətirli evdə yaşamağın ləzzətini dadacaqsınız!"
