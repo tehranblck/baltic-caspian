@@ -736,4 +736,92 @@ export const translations = {
         sizeAsc: "Площадь (По возрастанию)",
         sizeDesc: "Площадь (По убыванию)",
     }
-}; 
+};
+
+// Ürünleri API'den almak için fonksiyon
+export async function getProducts(locale = 'az') {
+    try {
+        const response = await fetch(`/api/home/products?locale=${locale}`);
+        if (!response.ok) {
+            throw new Error('Ürünler yüklenemedi');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Ürünleri getirme hatası:', error);
+        return [];
+    }
+}
+
+// Tek bir ürün getirmek için fonksiyon
+export async function getProductBySlug(slug, locale = 'az') {
+    try {
+        const products = await getProducts(locale);
+        return products.find(product => product.slug === slug);
+    } catch (error) {
+        console.error('Ürün getirme hatası:', error);
+        return null;
+    }
+}
+
+// Varsayılan ürünler (fallback için)
+export const defaultProducts = [
+    {
+        id: "1",
+        slug: "aile-evi-classic",
+        images: ['/slider.jpg', '/slider2.jpg', '/slider.jpg', '/slider2.jpg'],
+        size: "120m²",
+        rooms: 4,
+        price: {
+            az: "85,000 AZN",
+            ru: "85,000 AZN"
+        },
+        name: {
+            az: "Ailə Evi Classic",
+            ru: "Семейный Дом Classic"
+        },
+        description: {
+            az: "2 mərtəbəli, 4 otaqlı müasir taxta ev",
+            ru: "2-этажный, 4-комнатный современный деревянный дом"
+        },
+        features: {
+            az: [
+                "2 mərtəbəli",
+                "4 yataq otağı",
+                "2 hamam otağı",
+                "Geniş mətbəx",
+                "Qaraj",
+                "Bağça",
+                "İstilik sistemi",
+                "Su təchizatı",
+                "Elektrik sistemi"
+            ],
+            ru: [
+                "2 этажа",
+                "4 спальни",
+                "2 ванные комнаты",
+                "Просторная кухня",
+                "Гараж",
+                "Сад",
+                "Система отопления",
+                "Водоснабжение",
+                "Электрическая система"
+            ]
+        },
+        specifications: {
+            construction: {
+                az: "Yüksək keyfiyyətli taxta",
+                ru: "Высококачественная древесина"
+            },
+            warranty: {
+                az: "10 il zəmanət",
+                ru: "10 лет гарантии"
+            },
+            buildTime: {
+                az: "3 ay",
+                ru: "3 месяца"
+            }
+        }
+    }
+    // Diğer varsayılan ürünler kaldırıldı
+]; 

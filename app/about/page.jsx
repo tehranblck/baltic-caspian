@@ -64,7 +64,7 @@ export default function About() {
                         transition={{ duration: 0.3 }}
                     >
                         <Image
-                            src="/about2.jpg"
+                            src="/bg.jpg"
                             alt="Our Work"
                             fill
                             className="object-cover"

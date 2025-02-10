@@ -68,7 +68,7 @@ export default function About() {
     const t = translations[language];
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 hidden sm:block bg-white">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-16">

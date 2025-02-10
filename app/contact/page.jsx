@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { contactTranslations } from '../data/translations';
 import Image from 'next/image';
-import { HiOutlineLocationMarker, HiOutlinePhone, HiOutlineMail, HiOutlineClock } from 'react-icons/hi';
+import { HiOutlineLocationMarker, HiOutlinePhone, HiOutlineMail, HiOutlineClock, HiOutlineGlobeAlt } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
 // Animasyon varyantları
@@ -72,7 +72,7 @@ export default function Contact() {
                     {/* Contact Info */}
                     <motion.div className="space-y-6 md:space-y-8">
                         <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
-                            {/* Info Cards with Hover Effect */}
+                            {/* Address */}
                             <motion.div
                                 className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
                                 variants={fadeIn}
@@ -97,8 +97,29 @@ export default function Contact() {
                                     <HiOutlinePhone size={32} />
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">{t.phone.title}</h3>
-                                <a href={`tel:${t.phone.text}`} className="text-gray-600 hover:text-green-800">
-                                    {t.phone.text}
+                                <div className="space-y-1">
+                                    <a href={`tel:${t.phone.text}`} className="text-gray-600 hover:text-green-800 block">
+                                        {t.phone.text}
+                                    </a>
+                                    <a href={`tel:${t.mobile.text}`} className="text-gray-600 hover:text-green-800 block">
+                                        {t.mobile.text}
+                                    </a>
+                                </div>
+                            </motion.div>
+
+                            {/* Web */}
+                            <motion.div
+                                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                                variants={fadeIn}
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <div className="text-green-800 mb-4">
+                                    <HiOutlineGlobeAlt size={32} />
+                                </div>
+                                <h3 className="text-xl font-bold mb-2">{t.web.title}</h3>
+                                <a href={`https://${t.web.text}`} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-green-800">
+                                    {t.web.text}
                                 </a>
                             </motion.div>
 
@@ -133,7 +154,7 @@ export default function Contact() {
                             </motion.div>
                         </motion.div>
 
-                        {/* Map with Fade In */}
+                        {/* Map */}
                         <motion.div
                             className="bg-white p-4 rounded-xl shadow-md h-[300px] relative overflow-hidden"
                             variants={fadeIn}

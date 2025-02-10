@@ -87,11 +87,14 @@ export const footerTranslations = {
         about: "Haqqımızda",
         aboutText: "Caspian Baltic - Azərbaycanda keyfiyyətli taxta evlərin lider istehsalçısı",
         products: "Məhsullar",
-        contact: "Əlaqə",
+        contact: {
+            phone: "(994 12) 480 11 09",
+            mobile: "(994 55) 322 11 09",
+            web: "www.balticcaspian.com",
+            email: "office@balticcaspian.com"
+        },
         address: "Ünvan",
         addressText: "Bakı şəhəri, Xətai rayonu",
-        phone: "Telefon",
-        email: "E-poçt",
         rights: "Bütün hüquqlar qorunur",
         links: {
             home: "Ana Səhifə",
@@ -104,11 +107,14 @@ export const footerTranslations = {
         about: "О нас",
         aboutText: "Caspian Baltic - ведущий производитель качественных деревянных домов в Азербайджане",
         products: "Продукты",
-        contact: "Контакты",
+        contact: {
+            phone: "(994 12) 480 11 09",
+            mobile: "(994 55) 322 11 09",
+            web: "www.balticcaspian.com",
+            email: "office@balticcaspian.com"
+        },
         address: "Адрес",
         addressText: "город Баку, Хатаинский район",
-        phone: "Телефон",
-        email: "Эл. почта",
         rights: "Все права защищены",
         links: {
             home: "Главная",
@@ -194,31 +200,87 @@ export const homeTranslations = {
         heroTitle: "Xəyalınızdakı Taxta Ev",
         heroSubtitle: "Təbiətlə harmoniyada yaşamaq üçün ən yaxşı seçim",
         viewProducts: "Məhsullarımız",
-        contactUs: "Bizimlə Əlaqə"
+        contactUs: "Bizimlə Əlaqə",
+        services: {
+            title: "Xidmətlərimiz",
+            subtitle: "Sibir şamından hazırlanmış keyfiyyətli taxta tikililər",
+            items: [
+                "Taxta ev",
+                "Restoran",
+                "Besedka",
+                "Uşaq oyun evləri",
+                "Katfeclər",
+                "Rus hamamı",
+                "Sauna"
+            ]
+        },
+        features: {
+            title: "Texniki Xüsusiyyətlər",
+            items: [
+                "Sibir şamı emal olunub, antiseptik vasitələrlə suya davamlı hala salınır",
+                "Su bazlı boya ilə renglenir",
+                "Taxtalara qurd, bocək, çat düşmür",
+                "Rixter cədvəli ilə 9 və yuxarı bal gücündə zəlzələyə davamli",
+                "Evlərin ömrü 150 – 300 il"
+            ],
+            conclusion: "Beləliklə təbiət ətirli evdə yaşamağın ləzzətini dadacaqsınız!"
+        }
     },
     ru: {
         heroTitle: "Деревянный Дом Вашей Мечты",
         heroSubtitle: "Лучший выбор для жизни в гармонии с природой",
         viewProducts: "Наши Продукты",
-        contactUs: "Связаться с Нами"
+        contactUs: "Связаться с Нами",
+        services: {
+            title: "Наши Услуги",
+            subtitle: "Качественные деревянные постройки из сибирской сосны",
+            items: [
+                "Деревянный дом",
+                "Ресторан",
+                "Беседка",
+                "Детские игровые домики",
+                "Кафе",
+                "Русская баня",
+                "Сауна"
+            ]
+        },
+        features: {
+            title: "Технические Характеристики",
+            items: [
+                "Сибирская сосна обработана и водостойкая с антисептическими средствами",
+                "Окрашивается водной краской",
+                "Древесина устойчива к червям, насекомым и трещинам",
+                "Сейсмостойкость выше 9 баллов по шкале Рихтера",
+                "Срок службы домов 150-300 лет"
+            ],
+            conclusion: "Почувствуйте удовольствие от жизни в доме с ароматом природы!"
+        }
     }
 };
 
 export const contactTranslations = {
     az: {
         title: "Bizimlə Əlaqə",
-        subtitle: "Suallarınız üçün bizimlə əlaqə saxlayın",
+        subtitle: "Sibir şamından hazırlanmış keyfiyyətli taxta evlər üçün bizimlə əlaqə saxlayın",
         address: {
             title: "Ünvan",
             text: "Bakı şəhəri, Xətai rayonu"
         },
         phone: {
             title: "Telefon",
-            text: "+994 50 123 45 67"
+            text: "(994 12) 480 11 09"
+        },
+        mobile: {
+            title: "Mobil",
+            text: "(994 55) 322 11 09"
         },
         email: {
             title: "E-poçt",
-            text: "info@caspianbaltic.az"
+            text: "office@balticcaspian.com"
+        },
+        web: {
+            title: "Veb sayt",
+            text: "www.balticcaspian.com"
         },
         workHours: {
             title: "İş saatları",
@@ -238,18 +300,26 @@ export const contactTranslations = {
     },
     ru: {
         title: "Свяжитесь с Нами",
-        subtitle: "Свяжитесь с нами по любым вопросам",
+        subtitle: "Свяжитесь с нами для качественных деревянных домов из сибирской сосны",
         address: {
             title: "Адрес",
             text: "город Баку, Хатаинский район"
         },
         phone: {
             title: "Телефон",
-            text: "+994 50 123 45 67"
+            text: "(994 12) 480 11 09"
+        },
+        mobile: {
+            title: "Мобильный",
+            text: "(994 55) 322 11 09"
         },
         email: {
             title: "Эл. почта",
-            text: "info@caspianbaltic.az"
+            text: "office@balticcaspian.com"
+        },
+        web: {
+            title: "Веб-сайт",
+            text: "www.balticcaspian.com"
         },
         workHours: {
             title: "Рабочие часы",

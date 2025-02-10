@@ -1,136 +1,46 @@
 'use client';
 
 import { useLanguage } from '../context/LanguageContext';
-import Image from 'next/image';
+import { footerTranslations } from '../data/translations';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
-
-const translations = {
-    az: {
-        about: "Haqqımızda",
-        aboutText: "Caspian Baltic - Azərbaycanda keyfiyyətli taxta evlərin lider istehsalçısı",
-        products: "Məhsullar",
-        contact: "Əlaqə",
-        address: "Ünvan",
-        addressText: "Bakı şəhəri, Xətai rayonu",
-        phone: "Telefon",
-        email: "E-poçt",
-        rights: "Bütün hüquqlar qorunur",
-        links: {
-            home: "Ana Səhifə",
-            products: "Məhsullar",
-            about: "Haqqımızda",
-            contact: "Əlaqə"
-        }
-    },
-    ru: {
-        about: "О нас",
-        aboutText: "Caspian Baltic - ведущий производитель качественных деревянных домов в Азербайджане",
-        products: "Продукты",
-        contact: "Контакты",
-        address: "Адрес",
-        addressText: "город Баку, Хатаинский район",
-        phone: "Телефон",
-        email: "Эл. почта",
-        rights: "Все права защищены",
-        links: {
-            home: "Главная",
-            products: "Продукты",
-            about: "О нас",
-            contact: "Контакты"
-        }
-    }
-};
+import { HiOutlinePhone, HiOutlineMail, HiOutlineGlobeAlt, HiOutlineLocationMarker } from 'react-icons/hi';
 
 export default function Footer() {
     const { language } = useLanguage();
-    const t = translations[language];
-    const currentYear = new Date().getFullYear();
+    const t = footerTranslations[language];
 
     return (
-        <footer className="bg-gray-900 text-gray-300">
-            <div className="container mx-auto px-4 py-16">
-                {/* Main Footer */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                    {/* Company Info */}
-                    <div className="space-y-4">
-                        <div className="relative h-12 w-48">
-                            <Image
-                                src="/logo.png"
-                                alt="Caspian Baltic"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                        <p className="text-sm">
-                            {t.aboutText}
-                        </p>
-                        {/* Social Media */}
-                        <div className="flex space-x-4">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-                                className="hover:text-white transition">
-                                <FaFacebook size={24} />
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                                className="hover:text-white transition">
-                                <FaInstagram size={24} />
-                            </a>
-                            <a href="https://wa.me/yourphone" target="_blank" rel="noopener noreferrer"
-                                className="hover:text-white transition">
-                                <FaWhatsapp size={24} />
-                            </a>
-                        </div>
+        <footer className="bg-gray-900 text-white pt-16 pb-8">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                    {/* About Section */}
+                    <div>
+                        <h3 className="text-xl font-bold mb-4">{t.about}</h3>
+                        <p className="text-gray-400 mb-4">{t.aboutText}</p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-white text-lg font-bold mb-4">{t.links.home}</h3>
+                        <h3 className="text-xl font-bold mb-4">{t.links.home}</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/" className="hover:text-white transition">
+                                <Link href="/" className="text-gray-400 hover:text-white transition">
                                     {t.links.home}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/products" className="hover:text-white transition">
+                                <Link href="/products" className="text-gray-400 hover:text-white transition">
                                     {t.links.products}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className="hover:text-white transition">
+                                <Link href="/about" className="text-gray-400 hover:text-white transition">
                                     {t.links.about}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="hover:text-white transition">
+                                <Link href="/contact" className="text-gray-400 hover:text-white transition">
                                     {t.links.contact}
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Products */}
-                    <div>
-                        <h3 className="text-white text-lg font-bold mb-4">{t.products}</h3>
-                        <ul className="space-y-2">
-                            <li>
-                                <Link href="/products/aile-evi-classic" className="hover:text-white transition">
-                                    Ailə Evi Classic
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/products/premium-villa" className="hover:text-white transition">
-                                    Premium Villa
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/products/smart-villa" className="hover:text-white transition">
-                                    Smart Villa
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/products" className="hover:text-white transition">
-                                    {t.links.products}
                                 </Link>
                             </li>
                         </ul>
@@ -138,31 +48,50 @@ export default function Footer() {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-white text-lg font-bold mb-4">{t.contact}</h3>
-                        <ul className="space-y-2">
-                            <li>
-                                <span className="font-bold">{t.address}:</span><br />
-                                {t.addressText}
-                            </li>
-                            <li>
-                                <span className="font-bold">{t.phone}:</span><br />
-                                <a href="tel:+994501234567" className="hover:text-white transition">
-                                    +994 50 123 45 67
+                        <h3 className="text-xl font-bold mb-4">{t.links.contact}</h3>
+                        <div className="space-y-4">
+                            <div className="flex items-start gap-3">
+                                <HiOutlineLocationMarker className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                                <div>
+                                    <p className="font-semibold">{t.address}</p>
+                                    <p className="text-gray-400">{t.addressText}</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <HiOutlinePhone className="w-6 h-6 text-green-500" />
+                                <div>
+                                    <a href={`tel:${t.contact.phone}`} className="text-gray-400 hover:text-white transition block">
+                                        {t.contact.phone}
+                                    </a>
+                                    <a href={`tel:${t.contact.mobile}`} className="text-gray-400 hover:text-white transition block">
+                                        {t.contact.mobile}
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <HiOutlineGlobeAlt className="w-6 h-6 text-green-500" />
+                                <a href={`https://${t.contact.web}`} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                                    {t.contact.web}
                                 </a>
-                            </li>
-                            <li>
-                                <span className="font-bold">{t.email}:</span><br />
-                                <a href="mailto:info@caspianbaltic.az" className="hover:text-white transition">
-                                    info@caspianbaltic.az
-                                </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Working Hours */}
+                    <div>
+                        <h3 className="text-xl font-bold mb-4">Caspian Baltic</h3>
+                        <img src="/logo.png" alt="Caspian Baltic" className="w-32 mb-4" />
+                        <p className="text-gray-400">
+                            {language === 'az' ? 'Sibir şamından hazırlanmış keyfiyyətli taxta evlər' : 'Качественные деревянные дома из сибирской сосны'}
+                        </p>
                     </div>
                 </div>
 
                 {/* Copyright */}
-                <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-                    <p>© {currentYear} Caspian Baltic. {t.rights}.</p>
+                <div className="border-t border-gray-800 pt-8 mt-8 text-center">
+                    <p className="text-gray-400">
+                        © {new Date().getFullYear()} Caspian Baltic. {t.rights}
+                    </p>
                 </div>
             </div>
         </footer>

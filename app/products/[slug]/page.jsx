@@ -1,35 +1,35 @@
-import ProductDetail from "../../components/ProductDetail";
-import { products } from "../../data/products";
+import ProductPageClient from './ProductPageClient';
+import { productService } from '../../services/api';
 
-export default function ProductPage({ params }) {
-    const { slug } = params;
-    console.log("Slug:", slug);
-    console.log("Available products:", products.map(p => p.slug));
+// Server Component
+export default async function ProductPage({ params }) {
+    try {
+        // Server-side veri çekme
+        const product = await productService.getProductBySlug(params.slug, 'az'); // Varsayılan dil
 
-    const product = products.find(p => p.slug === slug);
-    console.log("Found product:", product);
-
-    if (!product) {
+        // Client component'e props olarak geç
+        return <ProductPageClient initialProduct={product} slug={params.slug} />;
+    } catch (error) {
+        console.error('Ürün getirme hatası:', error);
         return (
-            <div className="container mx-auto px-4 py-8">
-                <div className="text-center">
-                    <h1 className="text-2xl font-bold mb-4">Məhsul tapılmadı</h1>
-                    <p>İstədiyiniz məhsul mövcud deyil.</p>
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="text-red-600 text-xl">
+                    Məhsul yüklənərkən xəta baş verdi
                 </div>
             </div>
         );
     }
-
-    return (
-        <div className="container mx-auto px-4 py-8">
-            <ProductDetail productSlug={slug} />
-        </div>
-    );
 }
 
-// Static paths için
+// Statik yolları oluştur
 export async function generateStaticParams() {
-    return products.map((product) => ({
-        slug: product.slug,
-    }));
+    try {
+        const products = await productService.getAllProducts();
+        return products.map((product) => ({
+            slug: product.slug,
+        }));
+    } catch (error) {
+        console.error('Static paths oluşturma hatası:', error);
+        return [];
+    }
 } 

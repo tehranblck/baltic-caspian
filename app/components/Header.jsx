@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { headerTranslations } from '../data/translations';
@@ -16,7 +17,7 @@ export default function Header() {
             <nav className="container mx-auto px-4 py-4">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="text-2xl font-bold text-green-800">
-                        Caspian Baltic
+                        <Image src="/logo.svg" alt="logo" width={50} height={50} />
                     </Link>
 
                     {/* Desktop Menu */}
