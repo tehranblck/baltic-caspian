@@ -94,7 +94,7 @@ export const footerTranslations = {
             email: "office@balticcaspian.com"
         },
         address: "Ünvan",
-        addressText: "Bakı şəhəri, Xətai rayonu",
+        addressText: "Baksol küçəsi, Bakı, Azərbaycan",
         rights: "Bütün hüquqlar qorunur",
         links: {
             home: "Ana Səhifə",
@@ -116,7 +116,7 @@ export const footerTranslations = {
             email: "office@balticcaspian.com"
         },
         address: "Адрес",
-        addressText: "город Баку, Хатаинский район",
+        addressText: "улица Баксол, Баку, Азербайджан",
         rights: "Все права защищены",
         links: {
             home: "Главная",
@@ -268,7 +268,7 @@ export const contactTranslations = {
         subtitle: "Sibir şamından hazırlanmış keyfiyyətli taxta evlər üçün bizimlə əlaqə saxlayın",
         address: {
             title: "Ünvan",
-            text: "Bakı şəhəri, Xətai rayonu"
+            text: "Baksol küçəsi, Bakı, Azərbaycan"
         },
         phone: {
             title: "Telefon",
@@ -307,7 +307,7 @@ export const contactTranslations = {
         subtitle: "Свяжитесь с нами для качественных деревянных домов из сибирской сосны",
         address: {
             title: "Адрес",
-            text: "город Баку, Хатаинский район"
+            text: "улица Баксол, Баку, Азербайджан"
         },
         phone: {
             title: "Телефон",
