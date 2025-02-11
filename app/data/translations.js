@@ -69,6 +69,7 @@ export const headerTranslations = {
     az: {
         home: "Ana Səhifə",
         products: "Məhsullar",
+        portfolio: "Portfolio",
         about: "Haqqımızda",
         contact: "Əlaqə",
         language: "Dil"
@@ -76,6 +77,7 @@ export const headerTranslations = {
     ru: {
         home: "Главная",
         products: "Продукты",
+        portfolio: "Портфолио",
         about: "О нас",
         contact: "Контакты",
         language: "Язык"
@@ -340,5 +342,92 @@ export const contactTranslations = {
             phonePlaceholder: "Ваш номер телефона",
             messagePlaceholder: "Напишите ваше сообщение..."
         }
+    }
+};
+
+export const portfolioTranslations = {
+    az: {
+        title: "Portfolio",
+        subtitle: "Tamamladığımız layihələr",
+        projects: [
+            {
+                title: "Ailə Evi - Şamaxı",
+                description: "3 otaqlı müasir taxta ev",
+                image: "/portfolio1.jpg",
+                features: ["120m²", "3 otaq", "2 mərtəbə", "Qaraj"]
+            },
+            {
+                title: "Villa - Quba",
+                description: "Premium sinif taxta villa",
+                image: "/portfolio2.jpg",
+                features: ["200m²", "5 otaq", "2 mərtəbə", "Hovuz"]
+            },
+            {
+                title: "Restoran - Bakı",
+                description: "Taxta konstruksiyalı restoran",
+                image: "/portfolio3.jpg",
+                features: ["300m²", "Açıq sahə", "Terras"]
+            },
+            {
+                title: "Bağ Evi - Mərdəkan",
+                description: "Ailə üçün bağ evi",
+                image: "/portfolio4.jpg",
+                features: ["150m²", "4 otaq", "Bağça"]
+            },
+            {
+                title: "Sauna Kompleksi - İsmayıllı",
+                description: "Rus üslubunda sauna",
+                image: "/portfolio5.jpg",
+                features: ["80m²", "Hamam", "İstirahət otağı"]
+            },
+            {
+                title: "Kafe - Qəbələ",
+                description: "Modern taxta kafe",
+                image: "/portfolio6.jpg",
+                features: ["120m²", "Açıq terras", "Bar"]
+            }
+        ]
+    },
+    ru: {
+        title: "Портфолио",
+        subtitle: "Завершенные проекты",
+        projects: [
+            {
+                title: "Семейный Дом - Шемаха",
+                description: "3-комнатный современный деревянный дом",
+                image: "/portfolio1.jpg",
+                features: ["120м²", "3 комнаты", "2 этажа", "Гараж"]
+            },
+            {
+                title: "Вилла - Губа",
+                description: "Деревянная вилла премиум класса",
+                image: "/portfolio2.jpg",
+                features: ["200м²", "5 комнат", "2 этажа", "Бассейн"]
+            },
+            {
+                title: "Ресторан - Баку",
+                description: "Ресторан с деревянной конструкцией",
+                image: "/portfolio3.jpg",
+                features: ["300м²", "Открытая площадка", "Терраса"]
+            },
+            {
+                title: "Дачный Дом - Мардакян",
+                description: "Дачный дом для семьи",
+                image: "/portfolio4.jpg",
+                features: ["150м²", "4 комнаты", "Сад"]
+            },
+            {
+                title: "Сауна Комплекс - Исмаиллы",
+                description: "Сауна в русском стиле",
+                image: "/portfolio5.jpg",
+                features: ["80м²", "Баня", "Комната отдыха"]
+            },
+            {
+                title: "Кафе - Габала",
+                description: "Современное деревянное кафе",
+                image: "/portfolio6.jpg",
+                features: ["120м²", "Открытая терраса", "Бар"]
+            }
+        ]
     }
 }; 

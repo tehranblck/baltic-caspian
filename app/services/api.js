@@ -68,4 +68,39 @@ export const productService = {
             createdAt: item.createdAt
         }));
     }
+};
+
+export const portfolioService = {
+    async getAllPortfolios(locale = 'az') {
+        try {
+            const response = await fetch(`${API_URL}/api/portfolios?populate=*&locale=${locale}`);
+            if (!response.ok) {
+                throw new Error('Portfolio yükləmək mümkün olmadı');
+            }
+            const data = await response.json();
+            return this.transformPortfolios(data.data);
+        } catch (error) {
+            console.error('Portfolio API xətası:', error);
+            return [];
+        }
+    },
+
+    transformPortfolios(data) {
+        return data.map(item => ({
+            id: item.id,
+            documentId: item.documentId,
+            title: item.adi,
+            description: item.aciqlama,
+            size: item.sahe,
+            rooms: item.otaq_sayi,
+            extraFeature: item.elave_ozellik,
+            image: `${API_URL}${item.fotolar?.formats?.large?.url || item.fotolar?.url}`,
+            features: [
+                `${item.sahe}m²`,
+                `${item.otaq_sayi} ${item.locale === 'az' ? 'otaq' : 'комнат'}`,
+                item.elave_ozellik
+            ],
+            createdAt: item.createdAt
+        }));
+    }
 }; 
