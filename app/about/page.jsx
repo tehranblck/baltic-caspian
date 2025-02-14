@@ -30,6 +30,13 @@ export default function About() {
             {/* Hero Section */}
             <div className="relative py-24 bg-green-800 text-white">
                 <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/about.jpg"
+                        alt="About Baltic Caspian"
+                        fill
+                        className="object-cover opacity-30"
+                        priority
+                    />
                     <div className="absolute inset-0 bg-black opacity-50" />
                 </div>
                 <div className="relative z-10 container mx-auto px-4">
