@@ -55,7 +55,7 @@ export default function Contact() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/contact.jpg"
-                        alt="Contact Caspian Baltic"
+                        alt="Contact Baltic Caspian"
                         fill
                         className="object-cover opacity-20"
                     />

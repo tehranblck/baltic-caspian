@@ -6,9 +6,9 @@ import Link from 'next/link';
 
 const translations = {
     az: {
-        title: "Caspian Baltic Haqqında",
+        title: " Baltic Caspian Haqqında",
         subtitle: "Keyfiyyətli Taxta Evlər",
-        description: "2015-ci ildən bəri Azərbaycanda fəaliyyət göstərən Caspian Baltic şirkəti, müasir texnologiya və ənənəvi sənətkarlığı birləşdirərək ən yüksək keyfiyyətli taxta evlər istehsal edir.",
+        description: "2015-ci ildən bəri Azərbaycanda fəaliyyət göstərən  Baltic Caspian şirkəti, müasir texnologiya və ənənəvi sənətkarlığı birləşdirərək ən yüksək keyfiyyətli taxta evlər istehsal edir.",
         experience: "İl təcrübə",
         projects: "Tamamlanmış layihə",
         clients: "Məmnun müştəri",
@@ -34,9 +34,9 @@ const translations = {
         ]
     },
     ru: {
-        title: "О Caspian Baltic",
+        title: "О Baltic Caspian",
         subtitle: "Качественные Деревянные Дома",
-        description: "Компания Caspian Baltic, работающая в Азербайджане с 2015 года, производит деревянные дома высочайшего качества, сочетая современные технологии и традиционное мастерство.",
+        description: "Компания Baltic Caspian, работающая в Азербайджане с 2015 года, производит деревянные дома высочайшего качества, сочетая современные технологии и традиционное мастерство.",
         experience: "Лет опыта",
         projects: "Завершенных проектов",
         clients: "Довольных клиентов",
@@ -82,7 +82,7 @@ export default function About() {
                     <div className="relative h-[500px] rounded-xl overflow-hidden">
                         <Image
                             src="/about.jpg"
-                            alt="Caspian Baltic"
+                            alt="Baltic Caspian"
                             fill
                             className="object-cover"
                         />

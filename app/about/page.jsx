@@ -33,7 +33,7 @@ export default function About() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/about.jpg"
-                        alt="About Caspian Baltic"
+                        alt="About Baltic Caspian"
                         fill
                         className="object-cover opacity-20"
                     />

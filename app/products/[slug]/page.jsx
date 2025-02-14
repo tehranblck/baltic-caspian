@@ -7,8 +7,18 @@ export default async function ProductPage({ params }) {
         // Server-side veri çekme
         const product = await productService.getProductBySlug(params.slug, 'az'); // Varsayılan dil
 
-        // Client component'e props olarak geç
-        return <ProductPageClient initialProduct={product} slug={params.slug} />;
+        return (
+            <div className="min-h-screen bg-gray-50">
+                <div className="h-[40vh] relative bg-green-800">
+                    {/* Dekoratif arka plan */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-green-900 to-green-800 opacity-90" />
+                    <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-20" />
+                </div>
+                <div className="container mx-auto px-4 -mt-32 relative z-10 pb-16">
+                    <ProductPageClient initialProduct={product} slug={params.slug} />
+                </div>
+            </div>
+        );
     } catch (error) {
         console.error('Ürün getirme hatası:', error);
         return (

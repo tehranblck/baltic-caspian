@@ -5,8 +5,22 @@ import { productService } from '../../services/api';
 import ProductDetail from '../../components/ProductDetail';
 import { useEffect, useState } from 'react';
 
+const translations = {
+    az: {
+        title: "Layihələr",
+        error: "Məhsul yüklənərkən xəta baş verdi",
+        notFound: "Məhsul tapılmadı"
+    },
+    ru: {
+        title: "Проекты",
+        error: "Произошла ошибка при загрузке продукта",
+        notFound: "Продукт не найден"
+    }
+};
+
 export default function ProductPageClient({ initialProduct, slug }) {
     const { language } = useLanguage();
+    const t = translations[language];
     const [product, setProduct] = useState(initialProduct);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -57,17 +71,20 @@ export default function ProductPageClient({ initialProduct, slug }) {
         return (
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-gray-600 text-xl">
-                    {language === 'az' ? 'Məhsul tapılmadı' : 'Продукт не найден'}
+                    {t.notFound}
                 </div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 py-24">
-            <div className="container mx-auto px-4">
+        <>
+            <div className="container mx-auto px-4 mb-12">
+                <h1 className="text-4xl font-bold text-white text-center mb-12">
+                    {t.title}
+                </h1>
                 <ProductDetail product={product} />
             </div>
-        </div>
+        </>
     );
 } 

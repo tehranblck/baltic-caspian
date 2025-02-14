@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Caspian Baltic | Taxta Evlər",
-  description: "Caspian Baltic - Yüksək keyfiyyətli taxta evlər istehsalçısı. Təbiətlə harmoniyada yaşamaq üçün ən yaxşı seçim.",
-  keywords: "taxta evlər, деревянные дома, wooden houses, caspian baltic, eco evlər, yaşayış evləri",
-  authors: [{ name: "Caspian Baltic" }],
-  creator: "Caspian Baltic",
-  publisher: "Caspian Baltic",
+  title: "Baltic Caspian | Taxta Evlər",
+  description: "Baltic Caspian - Yüksək keyfiyyətli taxta evlər istehsalçısı. Təbiətlə harmoniyada yaşamaq üçün ən yaxşı seçim.",
+  keywords: "taxta evlər, деревянные дома, wooden houses, Baltic Caspian, eco houses, yaşayış evləri",
+  authors: [{ name: "Baltic Caspian" }],
+  creator: "Baltic Caspian",
+  publisher: "Baltic Caspian",
   formatDetection: {
     email: false,
     address: false,
@@ -40,16 +40,16 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Caspian Baltic | Taxta Evlər',
+    title: 'Baltic Caspian | Taxta Evlər',
     description: 'Yüksək keyfiyyətli taxta evlər istehsalçısı',
-    url: 'https://caspianbaltic.com',
-    siteName: 'Caspian Baltic',
+    url: 'https://balticcaspian.com',
+    siteName: 'Baltic Caspian',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Caspian Baltic Taxta Evlər',
+        alt: 'Baltic Caspian Taxta Evlər',
       },
     ],
     locale: 'az_AZ',

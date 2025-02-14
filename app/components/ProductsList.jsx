@@ -159,44 +159,30 @@ export default function ProductsList() {
                     {sortedProducts.map((product) => (
                         <div
                             key={product?.id}
-                            className="bg-white rounded-xl shadow-lg overflow-hidden group"
+                            className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300"
                         >
-                            <div className="relative h-64">
+                            <div className="relative h-64 overflow-hidden">
                                 <Image
                                     src={product?.images?.[0] || '/placeholder.jpg'}
                                     alt={product?.name?.[language] || ''}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                                 />
+                                <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300" />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold mb-2">
+                                <h3 className="text-xl font-bold mb-2 text-gray-800 group-hover:text-green-800 transition-colors duration-300">
                                     {product?.name?.[language]}
                                 </h3>
-                                <p className="text-gray-600 mb-4 line-clamp-2">
-                                    {product?.description?.[language]}
-                                </p>
-                                <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
-                                    <div className="flex items-center gap-1">
-                                        <HiOutlineHome className="w-5 h-5" />
-                                        <span>{product?.rooms} {t.rooms}</span>
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                        <HiOutlineScale className="w-5 h-5" />
-                                        <span>{product?.size}m²</span>
-                                    </div>
+                                <div className="text-gray-600 mb-4">
+                                    {product?.category?.[language]}
                                 </div>
-                                <div className="flex items-center justify-between">
-                                    <div className="text-2xl font-bold text-green-800">
-                                        {product?.price?.[language]}
-                                    </div>
-                                    <Link
-                                        href={`/products/${product?.slug}`}
-                                        className="px-6 py-2 bg-green-800 text-white rounded-lg hover:bg-green-700 transition transform hover:-translate-y-1"
-                                    >
-                                        {t.viewDetails}
-                                    </Link>
-                                </div>
+                                <Link
+                                    href={`/products/${product?.slug}`}
+                                    className="inline-block px-6 py-2 bg-green-800 text-white rounded-lg hover:bg-green-700 transition transform hover:-translate-y-1"
+                                >
+                                    {t.viewDetails}
+                                </Link>
                             </div>
                         </div>
                     ))}

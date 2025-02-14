@@ -112,8 +112,8 @@ export default function Footer() {
 
                     {/* Working Hours */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4">Caspian Baltic</h3>
-                        <Image src="/logo.svg" width={150} height={150} alt="Caspian Baltic" className="w-32 mb-4" />
+                        <h3 className="text-xl font-bold mb-4">Baltic Caspian</h3>
+                        <Image src="/logo.svg" width={150} height={150} alt="Baltic Caspian" className="w-32 mb-4" />
                         <p className="text-gray-400">
                             {language === 'az' ? 'Sibir şamından hazırlanmış keyfiyyətli taxta evlər' : 'Качественные деревянные дома из сибирской сосны'}
                         </p>
@@ -124,7 +124,7 @@ export default function Footer() {
                 <div className="border-t border-gray-800 pt-8 mt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-gray-400">
-                            © {new Date().getFullYear()} Caspian Baltic. {t.rights}
+                            © {new Date().getFullYear()} Baltic Caspian . {t.rights}
                         </p>
                         {/* Social Media Icons - Mobile */}
                         <div className="flex items-center space-x-6 md:hidden">

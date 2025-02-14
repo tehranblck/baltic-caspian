@@ -1,9 +1,9 @@
 export const aboutTranslations = {
     az: {
-        title: "Caspian Baltic Haqqında",
+        title: "Baltic Caspian Haqqında",
         subtitle: "Keyfiyyətli Taxta Evlər",
         mainTitle: "Azərbaycanın Lider Taxta Ev İstehsalçısı",
-        description1: "2015-ci ildən bəri Caspian Baltic şirkəti, müasir texnologiya və ənənəvi sənətkarlığı birləşdirərək ən yüksək keyfiyyətli taxta evlər istehsal edir.",
+        description1: "2015-ci ildən bəri Baltic Caspian şirkəti, müasir texnologiya və ənənəvi sənətkarlığı birləşdirərək ən yüksək keyfiyyətli taxta evlər istehsal edir.",
         description2: "Biz hər bir layihəyə fərdi yanaşırıq və müştərilərimizin istəklərinə uyğun həllər təklif edirik. Təcrübəli komandamız və yüksək keyfiyyətli materiallarımızla sizin xəyalınızdakı evi reallaşdırırıq.",
         stats: {
             experience: "İl təcrübə",
@@ -32,10 +32,10 @@ export const aboutTranslations = {
         }
     },
     ru: {
-        title: "О Caspian Baltic",
+        title: "О Baltic Caspian",
         subtitle: "Качественные Деревянные Дома",
         mainTitle: "Ведущий Производитель Деревянных Домов в Азербайджане",
-        description1: "С 2015 года компания Caspian Baltic производит деревянные дома высочайшего качества, сочетая современные технологии и традиционное мастерство.",
+        description1: "С 2015 года компания Baltic Caspian производит деревянные дома высочайшего качества, сочетая современные технологии и традиционное мастерство.",
         description2: "Мы индивидуально подходим к каждому проекту и предлагаем решения, соответствующие пожеланиям наших клиентов. С нашей опытной командой и высококачественными материалами мы воплощаем в реальность дом вашей мечты.",
         stats: {
             experience: "Лет опыта",
@@ -68,16 +68,14 @@ export const aboutTranslations = {
 export const headerTranslations = {
     az: {
         home: "Ana Səhifə",
-        products: "Məhsullar",
-        portfolio: "Portfolio",
+        products: "Layihələr",
         about: "Haqqımızda",
         contact: "Əlaqə",
         language: "Dil"
     },
     ru: {
         home: "Главная",
-        products: "Продукты",
-        portfolio: "Портфолио",
+        products: "Проекты",
         about: "О нас",
         contact: "Контакты",
         language: "Язык"
@@ -87,7 +85,7 @@ export const headerTranslations = {
 export const footerTranslations = {
     az: {
         about: "Haqqımızda",
-        aboutText: "Caspian Baltic - Azərbaycanda keyfiyyətli taxta evlərin lider istehsalçısı",
+        aboutText: "Baltic Caspian - Azərbaycanda keyfiyyətli taxta evlərin lider istehsalçısı",
         products: "Məhsullar",
         contact: {
             phone: "(994 12) 480 11 09",
@@ -100,7 +98,7 @@ export const footerTranslations = {
         rights: "Bütün hüquqlar qorunur",
         links: {
             home: "Ana Səhifə",
-            products: "Məhsullar",
+            products: "Layihələr",
             about: "Haqqımızda",
             contact: "Əlaqə"
         },
@@ -109,7 +107,7 @@ export const footerTranslations = {
     },
     ru: {
         about: "О нас",
-        aboutText: "Caspian Baltic - ведущий производитель качественных деревянных домов в Азербайджане",
+        aboutText: "Baltic Caspian - ведущий производитель качественных деревянных домов в Азербайджане",
         products: "Продукты",
         contact: {
             phone: "(994 12) 480 11 09",
@@ -122,7 +120,7 @@ export const footerTranslations = {
         rights: "Все права защищены",
         links: {
             home: "Главная",
-            products: "Продукты",
+            products: "Проекты",
             about: "О нас",
             contact: "Контакты"
         },
@@ -133,14 +131,11 @@ export const footerTranslations = {
 
 export const productsTranslations = {
     az: {
-        title: "Məhsullarımız",
+        title: "Layihələr",
         subtitle: "Təbiətlə harmoniyada yaşamaq üçün ən yaxşı seçim",
-        rooms: "Otaq",
-        size: "Sahə",
-        price: "Qiymət",
         viewDetails: "Ətraflı Bax",
         filters: "Filterlər",
-        all: "Bütün Evlər",
+        all: "Bütün Layihələr",
         smallHouses: "Kiçik Evlər (<100m²)",
         mediumHouses: "Orta Evlər (100-150m²)",
         largeHouses: "Böyük Evlər (>150m²)",
@@ -149,19 +144,17 @@ export const productsTranslations = {
         priceDesc: "Qiymət (Azalan)",
         sizeAsc: "Sahə (Artan)",
         sizeDesc: "Sahə (Azalan)",
-        bestSellersTitle: "Ən Çox Satılan Evlərimiz",
-        bestSellersSubtitle: "Müştərilərimizin ən çox bəyəndiyi layihələr",
-        viewAll: "Bütün Məhsullar"
+        bestSellersTitle: "Layihələr",
+        bestSellersSubtitle: "",
+        viewAll: "Bütün Layihələr",
+        contact: "WhatsApp ilə əlaqə"
     },
     ru: {
-        title: "Наши Продукты",
+        title: "Проекты",
         subtitle: "Лучший выбор для жизни в гармонии с природой",
-        rooms: "Комнат",
-        size: "Площадь",
-        price: "Цена",
         viewDetails: "Подробнее",
         filters: "Фильтры",
-        all: "Все Дома",
+        all: "Все Проекты",
         smallHouses: "Малые Дома (<100m²)",
         mediumHouses: "Средние Дома (100-150m²)",
         largeHouses: "Большие Дома (>150m²)",
@@ -170,9 +163,10 @@ export const productsTranslations = {
         priceDesc: "Цена (По убыванию)",
         sizeAsc: "Площадь (По возрастанию)",
         sizeDesc: "Площадь (По убыванию)",
-        bestSellersTitle: "Наши Бестселлеры",
-        bestSellersSubtitle: "Самые популярные проекты среди наших клиентов",
-        viewAll: "Все Продукты"
+        bestSellersTitle: "Проекты",
+        bestSellersSubtitle: "",
+        viewAll: "Все Проекты",
+        contact: "Связаться через WhatsApp"
     }
 };
 
@@ -183,7 +177,7 @@ export const productDetailTranslations = {
         construction: "İnşaat Materialı:",
         warranty: "Zəmanət:",
         buildTime: "Tikilmə Müddəti:",
-        contact: "Əlaqə",
+        contact: "WhatsApp ilə əlaqə",
         size: "Sahə:",
         rooms: "Otaq sayı:",
         gallery: "Qalereya"
@@ -194,7 +188,7 @@ export const productDetailTranslations = {
         construction: "Строительный материал:",
         warranty: "Гарантия:",
         buildTime: "Срок строительства:",
-        contact: "Контакты",
+        contact: "Связаться через WhatsApp",
         size: "Площадь:",
         rooms: "Количество комнат:",
         gallery: "Галерея"

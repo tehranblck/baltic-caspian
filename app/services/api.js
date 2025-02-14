@@ -8,7 +8,6 @@ export const productService = {
                 throw new Error('Məhsulları yükləmək mümkün olmadı');
             }
             const data = await response.json();
-
             return this.transformProducts(data.data);
         } catch (error) {
             console.error('API xətası:', error);
@@ -18,7 +17,7 @@ export const productService = {
 
     async getProductBySlug(slug, locale = 'az') {
         try {
-            const response = await fetch(`${API_URL}/api/products?filters[documentId][$eq]=${slug}&populate=*&locale=${locale}`);
+            const response = await fetch(`${API_URL}/api/products?filters[slug][$eq]=${slug}&populate=*&locale=${locale}`);
             if (!response.ok) {
                 throw new Error('Məhsul tapılmadı');
             }
@@ -36,36 +35,33 @@ export const productService = {
     transformProducts(data) {
         return data.map(item => ({
             id: item.id,
-            slug: item.documentId,
+            documentId: item.documentId,
+            slug: item.slug,
             name: {
-                [item.locale]: item.basliq,
+                [item.locale]: item.layihe_adi,
+                ...(item.localizations?.[0] && {
+                    [item.localizations[0].locale]: item.localizations[0].layihe_adi
+                })
             },
-            description: {
-                [item.locale]: item.aciqlama,
-            },
-            size: item.sahe,
-            rooms: item.otaq_sayi,
-            price: {
-                [item.locale]: `${item.qiymet} AZN`,
-            },
-            specifications: {
-                warranty: {
-                    [item.locale]: item.zemanet,
-                },
-                construction: {
-                    [item.locale]: item.insaat_materiali,
-                },
-                buildTime: {
-                    [item.locale]: item.tikilme_muddeti,
-                }
-            },
-            features: {
-                [item.locale]: item.ozelliklers.map(ozellik => ozellik.ozellik),
+            category: {
+                [item.locale]: item.kateqoriya_adi,
+                ...(item.localizations?.[0] && {
+                    [item.localizations[0].locale]: item.localizations[0].kateqoriya_adi
+                })
             },
             images: item.images.map(image =>
                 `${API_URL}${image.formats?.large?.url || image.url}`
             ),
-            createdAt: item.createdAt
+            // Resim formatlarını da saklayalım
+            imageFormats: item.images.map(image => ({
+                thumbnail: `${API_URL}${image.formats?.thumbnail?.url}`,
+                small: `${API_URL}${image.formats?.small?.url}`,
+                medium: `${API_URL}${image.formats?.medium?.url}`,
+                large: `${API_URL}${image.formats?.large?.url}`,
+                original: `${API_URL}${image.url}`
+            })),
+            createdAt: item.createdAt,
+            updatedAt: item.updatedAt
         }));
     }
 };
