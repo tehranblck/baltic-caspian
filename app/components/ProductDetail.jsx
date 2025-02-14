@@ -12,7 +12,7 @@ export default function ProductDetail({ product }) {
     const t = productDetailTranslations[language];
     const [selectedImage, setSelectedImage] = useState(0);
 
-    const whatsappLink = `https://wa.me/994554103131?text=${encodeURIComponent(
+    const whatsappLink = `https://wa.me/994553221109?text=${encodeURIComponent(
         `${language === 'az' ? 'Salam, məni maraqlandırır:' : 'Здравствуйте, меня интересует:'} ${product?.name?.[language]}`
     )}`;
 

@@ -4,12 +4,16 @@ import { useLanguage } from '../context/LanguageContext';
 import { footerTranslations } from '../data/translations';
 import Link from 'next/link';
 import { HiOutlinePhone, HiOutlineMail, HiOutlineGlobeAlt, HiOutlineLocationMarker } from 'react-icons/hi';
-import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import Image from 'next/image';
+import { SOCIAL_LINKS } from '../constants';
 
 export default function Footer() {
     const { language } = useLanguage();
     const t = footerTranslations[language];
+
+    // WhatsApp linki güncellendi
+    const whatsappLink = "https://wa.me/994553221109";
 
     return (
         <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -84,26 +88,26 @@ export default function Footer() {
                         <h3 className="text-xl font-bold mb-4">{t.social}</h3>
                         <div className="flex space-x-6">
                             <a
-                                href="https://www.instagram.com/taxta_evlerin_tikintisi_mmc/"
+                                href={SOCIAL_LINKS.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition group"
+                                className="text-gray-400 hover:text-white transition"
                             >
                                 <FaInstagram className="w-6 h-6" />
                             </a>
                             <a
-                                href="https://www.facebook.com/p/BALTIC-CASPIAN-taxta-evlerin-tikintisi-100065037902605/"
+                                href={SOCIAL_LINKS.facebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition group"
+                                className="text-gray-400 hover:text-white transition"
                             >
-                                <FaFacebook className="w-6 h-6" />
+                                <FaFacebookF className="w-6 h-6" />
                             </a>
                             <a
-                                href="https://wa.me/994553221109"
+                                href={SOCIAL_LINKS.whatsapp}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition group"
+                                className="text-gray-400 hover:text-white transition"
                             >
                                 <FaWhatsapp className="w-6 h-6" />
                             </a>
@@ -129,7 +133,7 @@ export default function Footer() {
                         {/* Social Media Icons - Mobile */}
                         <div className="flex items-center space-x-6 md:hidden">
                             <a
-                                href="https://www.instagram.com/taxta_evlerin_tikintisi_mmc/"
+                                href={SOCIAL_LINKS.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400 hover:text-white transition"
@@ -137,15 +141,15 @@ export default function Footer() {
                                 <FaInstagram className="w-5 h-5" />
                             </a>
                             <a
-                                href="https://www.facebook.com/p/BALTIC-CASPIAN-taxta-evlerin-tikintisi-100065037902605/"
+                                href={SOCIAL_LINKS.facebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400 hover:text-white transition"
                             >
-                                <FaFacebook className="w-5 h-5" />
+                                <FaFacebookF className="w-5 h-5" />
                             </a>
                             <a
-                                href="https://wa.me/994553221109"
+                                href={SOCIAL_LINKS.whatsapp}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400 hover:text-white transition"
