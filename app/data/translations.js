@@ -1,66 +1,62 @@
 export const aboutTranslations = {
     az: {
-        title: "Baltic Caspian Haqqında",
-        subtitle: "Keyfiyyətli Taxta Evlər",
-        mainTitle: "Azərbaycanın Lider Taxta Ev İstehsalçısı",
-        description1: "2015-ci ildən bəri Baltic Caspian şirkəti, müasir texnologiya və ənənəvi sənətkarlığı birləşdirərək ən yüksək keyfiyyətli taxta evlər istehsal edir.",
-        description2: "Biz hər bir layihəyə fərdi yanaşırıq və müştərilərimizin istəklərinə uyğun həllər təklif edirik. Təcrübəli komandamız və yüksək keyfiyyətli materiallarımızla sizin xəyalınızdakı evi reallaşdırırıq.",
-        stats: {
-            experience: "İl təcrübə",
-            projects: "Tamamlanmış layihə",
-            clients: "Məmnun müştəri",
-            team: "Peşəkar işçi"
-        },
+        title: "Haqqımızda",
+        subtitle: "Keyfiyyətli taxta evlər və məhsullar",
+        content: [
+            "BALTIC CASPIAN LTD 2008-ci ildə yaradılmışdır. Əsas fəaliyyətimiz ağacın kəsilməsi və rəndələnməsidir.",
+            "Təsisçilərimiz 1998-ci ildən ev tikintisində ağac emalı və yapışdırılmış tirlərin istehsalı sahəsində ixtisaslaşmışdır.",
+            "Müştərinin istəyinə uyğun olaraq fərdi qaydada evlər, yay evləri, hamamlar və s. istehsal olunur.",
+            "BALTIC CASPIAN LTD Rusiyadan şam və küknar ağacı idxal edir. Ağac çeşidlənir, qurudulur və ondan müxtəlif profillər istehsal olunur: döşəmə taxtası, daxili və xarici işlər üçün vaqonka, terras taxtaları.",
+            "İstehsalatda yeni rəndələmə maşınlarından istifadə olunur ki, bu da həm daxili, həm də xarici bazarda satış üçün böyük həcmdə məhsul istehsal etməyə imkan verir.",
+            "Palıd ağacının massivindən döşəmə üçün palıd taxtalar hazırlanır. Bu, müxtəlif otaqlar üçün nəzərdə tutulmuş ekoloji təmiz, uzunömürlü, zərif döşəmədir.",
+            "Qapılar da massiv ağacdan hazırlanır. Biz palıd, göyrüş və şam ağacından istifadə edirik. Müştəri lazımi ölçüləri təqdim edə, model və rəngi seçə bilər."
+        ],
         values: {
             title: "Dəyərlərimiz",
-            quality: {
-                title: "Yüksək Keyfiyyət",
-                description: "Ən yaxşı materiallar və müasir texnologiyalardan istifadə"
-            },
-            eco: {
-                title: "Ekoloji Təmizlik",
-                description: "100% təbii materiallar və ətraf mühitə qayğı"
-            },
-            innovation: {
-                title: "İnnovasiya",
-                description: "Daim yenilənən texnologiya və həllər"
-            },
-            customer: {
-                title: "Müştəri Məmnuniyyəti",
-                description: "Hər bir müştəriyə fərdi yanaşma və tam dəstək"
-            }
+            items: [
+                {
+                    title: "Keyfiyyət",
+                    description: "Ən yüksək keyfiyyət standartlarına uyğun məhsullar"
+                },
+                {
+                    title: "Təcrübə",
+                    description: "25 illik sənaye təcrübəsi"
+                },
+                {
+                    title: "Müştəri məmnuniyyəti",
+                    description: "Müştərilərimizin tələblərinə tam uyğunluq"
+                }
+            ]
         }
     },
     ru: {
-        title: "О Baltic Caspian",
-        subtitle: "Качественные Деревянные Дома",
-        mainTitle: "Ведущий Производитель Деревянных Домов в Азербайджане",
-        description1: "С 2015 года компания Baltic Caspian производит деревянные дома высочайшего качества, сочетая современные технологии и традиционное мастерство.",
-        description2: "Мы индивидуально подходим к каждому проекту и предлагаем решения, соответствующие пожеланиям наших клиентов. С нашей опытной командой и высококачественными материалами мы воплощаем в реальность дом вашей мечты.",
-        stats: {
-            experience: "Лет опыта",
-            projects: "Завершенных проектов",
-            clients: "Довольных клиентов",
-            team: "Профессиональных сотрудников"
-        },
+        title: "О нас",
+        subtitle: "Качественные деревянные дома и изделия",
+        content: [
+            "BALTIC CASPIAN LTD была создана в 2008 году. Наша основная деятельность - резка дерева, строгание.",
+            "Учредители специализируются на обработке древесины и клееных балок в строительстве домов с 1998 года.",
+            "Индивидуально, в соответствии с желанием клиента, производятся дома, летние домики, бани и т.д.",
+            "BALTIC CASPIAN LTD импортирует сосновую и еловую древесину из России. Дерево сортируется, сушится и из него производятся различные профили: доска для пола, вагонка для внутренних и наружных работ, доски для террас.",
+            "В производстве используются новые стругальные машины, которые позволяют изготовить большой объем продукции для реализации как на внутреннем, так и на внешнем рынке.",
+            "Из массива дуба изготавливаются дубовые доски для пола. Это экологически чистый, долговечный, элегантный пол, предназначенный для различных помещений.",
+            "Из массива дерева изготавливаются и двери. Мы используем дуб, ясень, сосну. Клиент может предоставить необходимые размеры, выбрать модель и цвет."
+        ],
         values: {
             title: "Наши Ценности",
-            quality: {
-                title: "Высокое Качество",
-                description: "Использование лучших материалов и современных технологий"
-            },
-            eco: {
-                title: "Экологичность",
-                description: "100% натуральные материалы и забота об окружающей среде"
-            },
-            innovation: {
-                title: "Инновации",
-                description: "Постоянно обновляемые технологии и решения"
-            },
-            customer: {
-                title: "Удовлетворенность Клиентов",
-                description: "Индивидуальный подход и полная поддержка каждого клиента"
-            }
+            items: [
+                {
+                    title: "Качество",
+                    description: "Продукция, соответствующая высочайшим стандартам качества"
+                },
+                {
+                    title: "Опыт",
+                    description: "25-летний опыт работы в отрасли"
+                },
+                {
+                    title: "Удовлетворенность клиентов",
+                    description: "Полное соответствие требованиям наших клиентов"
+                }
+            ]
         }
     }
 };
@@ -90,6 +86,7 @@ export const footerTranslations = {
         contact: {
             phone: "(994 12) 480 11 09",
             mobile: "(994 55) 322 11 09",
+            mobile2: "(994 50) 322 11 09",
             web: "www.balticcaspian.com",
             email: "office@balticcaspian.com"
         },
@@ -112,6 +109,7 @@ export const footerTranslations = {
         contact: {
             phone: "(994 12) 480 11 09",
             mobile: "(994 55) 322 11 09",
+            mobile2: "(994 50) 322 11 09",
             web: "www.balticcaspian.com",
             email: "office@balticcaspian.com"
         },
@@ -260,8 +258,8 @@ export const homeTranslations = {
 
 export const contactTranslations = {
     az: {
-        title: "Bizimlə Əlaqə",
-        subtitle: "Sibir şamından hazırlanmış keyfiyyətli taxta evlər üçün bizimlə əlaqə saxlayın",
+        title: "Əlaqə",
+        subtitle: "Bizimlə əlaqə saxlayın",
         address: {
             title: "Ünvan",
             text: "Baksol küçəsi, Bakı, Azərbaycan"
@@ -274,33 +272,26 @@ export const contactTranslations = {
             title: "Mobil",
             text: "(994 55) 322 11 09"
         },
+        mobile2: {
+            title: "Mobil 2",
+            text: "(994 50) 322 11 09"
+        },
+        web: {
+            title: "Veb Sayt",
+            text: "www.balticcaspian.com"
+        },
         email: {
             title: "E-poçt",
             text: "office@balticcaspian.com"
         },
-        web: {
-            title: "Veb sayt",
-            text: "www.balticcaspian.com"
-        },
         workHours: {
-            title: "İş saatları",
+            title: "İş Saatları",
             text: "Bazar ertəsi - Şənbə: 09:00 - 18:00"
-        },
-        form: {
-            name: "Adınız",
-            email: "E-poçt ünvanınız",
-            phone: "Telefon nömrəniz",
-            message: "Mesajınız",
-            send: "Göndər",
-            namePlaceholder: "Ad və Soyadınız",
-            emailPlaceholder: "E-poçt ünvanınız",
-            phonePlaceholder: "Telefon nömrəniz",
-            messagePlaceholder: "Mesajınızı yazın..."
         }
     },
     ru: {
-        title: "Свяжитесь с Нами",
-        subtitle: "Свяжитесь с нами для качественных деревянных домов из сибирской сосны",
+        title: "Контакты",
+        subtitle: "Свяжитесь с нами",
         address: {
             title: "Адрес",
             text: "улица Баксол, Баку, Азербайджан"
@@ -313,28 +304,21 @@ export const contactTranslations = {
             title: "Мобильный",
             text: "(994 55) 322 11 09"
         },
-        email: {
-            title: "Эл. почта",
-            text: "office@balticcaspian.com"
+        mobile2: {
+            title: "Мобильный 2",
+            text: "(994 50) 322 11 09"
         },
         web: {
             title: "Веб-сайт",
             text: "www.balticcaspian.com"
         },
-        workHours: {
-            title: "Рабочие часы",
-            text: "Понедельник - Суббота: 09:00 - 18:00"
+        email: {
+            title: "Эл. почта",
+            text: "office@balticcaspian.com"
         },
-        form: {
-            name: "Ваше имя",
-            email: "Ваш email",
-            phone: "Ваш телефон",
-            message: "Ваше сообщение",
-            send: "Отправить",
-            namePlaceholder: "Имя и Фамилия",
-            emailPlaceholder: "Ваш email адрес",
-            phonePlaceholder: "Ваш номер телефона",
-            messagePlaceholder: "Напишите ваше сообщение..."
+        workHours: {
+            title: "Рабочее время",
+            text: "Понедельник - Суббота: 09:00 - 18:00"
         }
     }
 };

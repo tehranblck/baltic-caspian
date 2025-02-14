@@ -63,22 +63,37 @@ export default function Footer() {
                                     <p className="text-gray-400">{t.addressText}</p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <HiOutlinePhone className="w-6 h-6 text-green-500" />
-                                <div>
-                                    <a href={`tel:${t.contact.phone}`} className="text-gray-400 hover:text-white transition block">
+                            <div className="space-y-2">
+                                <div className="flex items-center gap-2">
+                                    <HiOutlinePhone className="w-5 h-5" />
+                                    <a href={`tel:${t.contact.phone}`} className="hover:text-white transition">
                                         {t.contact.phone}
                                     </a>
-                                    <a href={`tel:${t.contact.mobile}`} className="text-gray-400 hover:text-white transition block">
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <HiOutlinePhone className="w-5 h-5" />
+                                    <a href={`tel:${t.contact.mobile}`} className="hover:text-white transition">
                                         {t.contact.mobile}
                                     </a>
                                 </div>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <HiOutlineGlobeAlt className="w-6 h-6 text-green-500" />
-                                <a href={`https://${t.contact.web}`} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
-                                    {t.contact.web}
-                                </a>
+                                <div className="flex items-center gap-2">
+                                    <HiOutlinePhone className="w-5 h-5" />
+                                    <a href={`tel:${t.contact.mobile2}`} className="hover:text-white transition">
+                                        {t.contact.mobile2}
+                                    </a>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <HiOutlineMail className="w-5 h-5" />
+                                    <a href={`mailto:${t.contact.email}`} className="hover:text-white transition">
+                                        {t.contact.email}
+                                    </a>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <HiOutlineGlobeAlt className="w-5 h-5" />
+                                    <a href={`https://${t.contact.web}`} target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+                                        {t.contact.web}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
