@@ -9,7 +9,7 @@ export default async function ProductPage({ params }) {
 
         return (
             <div className="min-h-screen bg-gray-50">
-                <div className="h-[40vh] relative bg-green-800">
+                <div className="h-[30vh] relative bg-green-800">
                     {/* Dekoratif arka plan */}
                     <div className="absolute inset-0 bg-gradient-to-b from-green-900 to-green-800 opacity-90" />
                     <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-20" />
