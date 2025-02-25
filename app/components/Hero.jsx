@@ -19,7 +19,7 @@ const slides = [
     },
     {
         id: 3,
-        image: "/slider.jpg",
+        image: "/slider3.jpg",
     }
 ];
 
@@ -44,7 +44,7 @@ export default function Hero() {
                 <AnimatePresence initial={false}>
                     <motion.div
                         key={currentSlide}
-                        className="absolute inset-0"
+                        className="absolute inset-0 w-full h-full"
                         initial={{ opacity: 0, scale: 1.1 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0 }}
@@ -53,9 +53,12 @@ export default function Hero() {
                         <Image
                             src={slides[currentSlide].image}
                             alt="Slider Background"
-                            fill
-                            className="object-cover"
+                            width={900}
+                            height={900}
+
+                            className="object-cover w-full h-full"
                             priority
+                            quality={100}
                         />
                         <div className="absolute inset-0 bg-black/50" />
                     </motion.div>
