@@ -3,6 +3,7 @@
 import Hero from './components/Hero';
 import BestSellers from './components/BestSellers';
 import About from './components/About';
+import HomeGallery from './components/HomeGallery';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -16,6 +17,14 @@ export default function Home() {
       >
         <Hero />
       </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <BestSellers />
+      </motion.div>
 
       {/* About Section */}
       <motion.div
@@ -27,15 +36,17 @@ export default function Home() {
         <About />
       </motion.div>
 
-      {/* Projects Section */}
+      {/* Gallery Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <BestSellers />
+        <HomeGallery />
       </motion.div>
+
+      {/* Projects Section */}
     </div>
   );
 }

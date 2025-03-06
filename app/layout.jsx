@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
       >
         <LanguageProvider>
           <Header />
-          <main className="pt-16">
+          <main >
             {children}
           </main>
           <Footer />

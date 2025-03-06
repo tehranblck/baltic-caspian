@@ -17,7 +17,7 @@ export default function BestSellers() {
         const fetchProducts = async () => {
             try {
                 const data = await productService.getAllProducts(language);
-                setProducts(data.slice(0, 3)); // Sadece ilk 3 ürünü göster
+                setProducts(data.slice(0, 9)); // Sadece ilk 3 ürünü göster
             } catch (error) {
                 console.error('Ürünler yüklenirken hata:', error);
             }

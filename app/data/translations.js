@@ -60,11 +60,22 @@ export const aboutTranslations = {
         }
     }
 };
+export const topBarTranslations = {
+    az: {
+        contact: "Qiymət hesablatmaq üçün əlaqə",
+        whatsapp: "Whatsapp ilə əlaqə "
+    },
+    ru: {
+        contact: "ОТПРАВИТЬ ПРОЕКТ НА РАСЧЁТ",
+        whatsapp: "Напишите нам в WhatsApp"
+    }
+};
 
 export const headerTranslations = {
     az: {
         home: "Ana Səhifə",
         products: "Layihələr",
+        gallery: "Qalereya",
         about: "Haqqımızda",
         contact: "Əlaqə",
         language: "Dil"
@@ -72,6 +83,7 @@ export const headerTranslations = {
     ru: {
         home: "Главная",
         products: "Проекты",
+        gallery: "Галерея",
         about: "О нас",
         contact: "Контакты",
         language: "Язык"
@@ -408,4 +420,20 @@ export const portfolioTranslations = {
             }
         ]
     }
-}; 
+};
+export const galleryTranslations = {
+    az: {
+        photos: "Şəkillər",
+        videos: "Videolar",
+        noPhotos: "Şəkillər yoxdur",
+        noVideos: "Videolar yoxdur"
+    },
+    ru: {
+        photos: "Фотографии",
+        videos: "Видео",
+        noPhotos: "Фотографий нет",
+        noVideos: "Видео нет"
+    }
+};
+
+
