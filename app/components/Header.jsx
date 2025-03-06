@@ -106,7 +106,7 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                         {/* Desktop Menu */}
                         <div className="hidden md:flex py-4 items-center justify-between w-full">
-                            <div className="flex items-center space-x-4 lg:space-x-8 xl:space-x-44">
+                            <div className="flex items-center ds space-x-4 lg:space-x-8 xl:space-x-44">
                                 <Link href="/" className="text-white hover:text-gray-200 transition uppercase text-sm lg:text-base">
                                     {t.home}
                                 </Link>
