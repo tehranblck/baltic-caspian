@@ -45,7 +45,7 @@ export default function Header() {
                         <div className=" md:mb-0">
                             <Link href="/" className="flex items-center">
                                 <Image
-                                    src="/logo1.png"
+                                    src="/logo.svg"
                                     alt="Baltic Caspian Logo"
                                     width={200}
                                     height={70}
