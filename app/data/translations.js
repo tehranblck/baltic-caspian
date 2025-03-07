@@ -207,7 +207,7 @@ export const productDetailTranslations = {
 
 export const homeTranslations = {
     az: {
-        heroTitle: "Xəyalınızdakı Taxta Evlər",
+        heroTitle: "XƏYALINIZDAKİ TAXTA EVLƏR!",
         heroSubtitle: "Təbiətlə harmoniyada yaşamaq üçün ən yaxşı seçim",
         viewProducts: "Məhsullarımız",
         contactUs: "Bizimlə Əlaqə",
@@ -237,7 +237,7 @@ export const homeTranslations = {
         }
     },
     ru: {
-        heroTitle: "Деревянные дома вашей мечты",
+        heroTitle: "ДЕРЕВЯННЫЕ ДОМА ВАШЕЙ МЕЧТЫ!",
         heroSubtitle: "Лучший выбор для жизни в гармонии с природой",
         viewProducts: "Наши Продукты",
         contactUs: "Связаться с Нами",

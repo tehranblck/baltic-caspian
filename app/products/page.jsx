@@ -50,7 +50,7 @@ export default function ProductsPage() {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <div className="relative py-24 bg-green-800 text-white">
+            <div style={{ backgroundImage: 'url(/forest.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} className="relative py-20 bg-green-800 text-white">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-black opacity-50" />
                 </div>
