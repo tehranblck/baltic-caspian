@@ -207,8 +207,8 @@ export const productDetailTranslations = {
 
 export const homeTranslations = {
     az: {
-        heroTitle: "XƏYALINIZDAKİ TAXTA EVLƏR!",
-        heroSubtitle: "Təbiətlə harmoniyada yaşamaq üçün ən yaxşı seçim",
+        heroTitle: "XƏYALINIZDAKİ TAXTA EVLƏR",
+        heroSubtitle: "Təbiətlə harmoniyada yaşamaq üçün ən yaxşı seçim!",
         viewProducts: "Məhsullarımız",
         contactUs: "Bizimlə Əlaqə",
         services: {
@@ -237,8 +237,8 @@ export const homeTranslations = {
         }
     },
     ru: {
-        heroTitle: "ДЕРЕВЯННЫЕ ДОМА ВАШЕЙ МЕЧТЫ!",
-        heroSubtitle: "Лучший выбор для жизни в гармонии с природой",
+        heroTitle: "ДЕРЕВЯННЫЕ ДОМА ВАШЕЙ МЕЧТЫ",
+        heroSubtitle: "Лучший выбор для жизни в гармонии с природой!",
         viewProducts: "Наши Продукты",
         contactUs: "Связаться с Нами",
         services: {
