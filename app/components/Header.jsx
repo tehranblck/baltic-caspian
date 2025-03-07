@@ -45,7 +45,7 @@ export default function Header() {
                         <div className=" md:mb-0">
                             <Link href="/" className="flex items-center">
                                 <Image
-                                    src="/logo.svg"
+                                    src="/logo1.png"
                                     alt="Baltic Caspian Logo"
                                     width={200}
                                     height={70}
@@ -82,10 +82,10 @@ export default function Header() {
                                     <span className="text-gray-600 hidden sm:block">Baku Azerbaijan</span>
                                 </div>
                                 <a
-                                    href="tel:+994503221109"
+                                    href="tel:+994553221109"
                                     className="text-xl font-semibold text-green-600 hover:text-green-700"
                                 >
-                                    (994 50) 322 11 09
+                                    (994 55) 322 11 09
 
                                 </a>
                                 <a
@@ -106,7 +106,7 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                         {/* Desktop Menu */}
                         <div className="hidden md:flex py-4 items-center justify-between w-full">
-                            <div className="flex items-center ds space-x-4 lg:space-x-8 xl:space-x-44">
+                            <div className="flex items-center ds space-x-4 lg:space-x-8 xl:space-x-32">
                                 <Link href="/" className="text-white hover:text-gray-200 transition uppercase text-sm lg:text-base">
                                     {t.home}
                                 </Link>

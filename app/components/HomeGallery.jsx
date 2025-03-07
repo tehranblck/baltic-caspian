@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 import { IoClose } from 'react-icons/io5';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const baseURL = 'https://api.balticcaspian.com';
 
-const PhotoModal = ({ photo, onClose }) => {
+const PhotoModal = ({ photo, photos, currentIndex, onClose, onNext, onPrev }) => {
     if (!photo) return null;
 
     return (
@@ -27,11 +28,31 @@ const PhotoModal = ({ photo, onClose }) => {
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute -top-12 right-0 bg-white/10 hover:bg-white/20 transition-colors rounded-full p-2 text-white"
+                    className="absolute -top-12 right-0 bg-green-600/80 hover:bg-green-700 transition-colors rounded-full p-2 text-white"
                     aria-label="Close modal"
                 >
                     <IoClose size={24} />
                 </button>
+
+                {/* Navigation Buttons */}
+                {currentIndex > 0 && (
+                    <button
+                        onClick={onPrev}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-green-600/80 hover:bg-green-700 transition-colors rounded-full p-3 text-white z-50 shadow-lg hover:shadow-xl"
+                        aria-label="Previous photo"
+                    >
+                        <IoIosArrowBack size={28} />
+                    </button>
+                )}
+                {currentIndex < photos.length - 1 && (
+                    <button
+                        onClick={onNext}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-green-600/80 hover:bg-green-700 transition-colors rounded-full p-3 text-white z-50 shadow-lg hover:shadow-xl"
+                        aria-label="Next photo"
+                    >
+                        <IoIosArrowForward size={28} />
+                    </button>
+                )}
 
                 {/* Photo Container */}
                 <div className="relative rounded-xl overflow-hidden bg-black shadow-2xl">
@@ -62,6 +83,7 @@ export default function HomeGallery() {
     const [photos, setPhotos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const { language } = useLanguage();
 
     // Body scroll lock when modal is open
@@ -81,11 +103,42 @@ export default function HomeGallery() {
         const handleEsc = (event) => {
             if (event.keyCode === 27) {
                 setSelectedPhoto(null);
+                setCurrentIndex(0);
             }
         };
         window.addEventListener('keydown', handleEsc);
         return () => window.removeEventListener('keydown', handleEsc);
     }, []);
+
+    // Klavye ile navigasyon
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (!selectedPhoto) return;
+
+            if (event.key === 'ArrowLeft' && currentIndex > 0) {
+                handlePrev();
+            } else if (event.key === 'ArrowRight' && currentIndex < photos.length - 1) {
+                handleNext();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [currentIndex, photos.length, selectedPhoto]);
+
+    const handleNext = () => {
+        if (currentIndex < photos.length - 1) {
+            setCurrentIndex(prev => prev + 1);
+            setSelectedPhoto(photos[currentIndex + 1]);
+        }
+    };
+
+    const handlePrev = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(prev => prev - 1);
+            setSelectedPhoto(photos[currentIndex - 1]);
+        }
+    };
 
     useEffect(() => {
         const fetchPhotos = async () => {
@@ -104,6 +157,11 @@ export default function HomeGallery() {
         fetchPhotos();
     }, [language]);
 
+    const handlePhotoClick = (photo, index) => {
+        setSelectedPhoto(photo);
+        setCurrentIndex(index);
+    };
+
     return (
         <div className="container mx-auto px-4 py-16">
             {/* Loading State */}
@@ -116,11 +174,11 @@ export default function HomeGallery() {
             {/* Photo Grid */}
             {!loading && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {photos?.map((photo) => (
+                    {photos?.map((photo, index) => (
                         <div
                             key={photo.id}
                             className="group cursor-pointer"
-                            onClick={() => setSelectedPhoto(photo)}
+                            onClick={() => handlePhotoClick(photo, index)}
                         >
                             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
                                 <Image
@@ -144,7 +202,17 @@ export default function HomeGallery() {
             )}
 
             {/* Photo Modal */}
-            <PhotoModal photo={selectedPhoto} onClose={() => setSelectedPhoto(null)} />
+            <PhotoModal
+                photo={selectedPhoto}
+                photos={photos}
+                currentIndex={currentIndex}
+                onClose={() => {
+                    setSelectedPhoto(null);
+                    setCurrentIndex(0);
+                }}
+                onNext={handleNext}
+                onPrev={handlePrev}
+            />
         </div>
     );
 } 
