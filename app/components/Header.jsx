@@ -92,7 +92,7 @@ export default function Header() {
                                     href="mailto:info@balticcaspian.az"
                                     className="text-gray-600 hidden sm:block hover:text-green-600"
                                 >
-                                    info@balticcaspian.az
+                                    info@balticcaspian.com
                                 </a>
                             </div>
                         </div>
