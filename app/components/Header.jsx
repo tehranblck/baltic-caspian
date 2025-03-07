@@ -101,7 +101,7 @@ export default function Header() {
             </div>
 
             {/* Main Navigation */}
-            <header className="bg-green-600 w-full z-40">
+            <header className="bg-[#005fab] w-full z-40">
                 <nav className="container mx-auto px-4 lg:px-8" ref={menuRef}>
                     <div className="flex items-center justify-between">
                         {/* Desktop Menu */}
