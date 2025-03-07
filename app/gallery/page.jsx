@@ -40,7 +40,7 @@ const GalleryPage = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8 mt-24">
+        <div className="container mx-auto px-4 py-8 mt-12">
             <h1 className="text-3xl font-bold text-center mb-12">
                 {language === 'az' ? 'Layihələrimiz' : 'Наши проекты'}
             </h1>
