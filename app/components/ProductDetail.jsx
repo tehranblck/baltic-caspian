@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { productDetailTranslations } from '../data/translations';
+import { IoArrowBack, IoArrowForward } from 'react-icons/io5';
 
 export default function ProductDetail({ product }) {
     const { language } = useLanguage();
@@ -15,6 +16,18 @@ export default function ProductDetail({ product }) {
     const whatsappLink = `https://wa.me/994553221109?text=${encodeURIComponent(
         `${language === 'az' ? 'Salam, məni maraqlandırır:' : 'Здравствуйте, меня интересует:'} ${product?.name?.[language]}`
     )}`;
+
+    const handleNext = () => {
+        if (selectedImage < product?.images?.length - 1) {
+            setSelectedImage(selectedImage + 1);
+        }
+    };
+
+    const handlePrev = () => {
+        if (selectedImage > 0) {
+            setSelectedImage(selectedImage - 1);
+        }
+    };
 
     return (
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -29,6 +42,25 @@ export default function ProductDetail({ product }) {
                             className="object-cover"
                             priority
                         />
+                        {/* Navigation Buttons */}
+                        {selectedImage > 0 && (
+                            <button
+                                onClick={handlePrev}
+                                className="absolute left-4 top-1/2 -translate-y-1/2 bg-green-600/80 hover:bg-green-700 transition-colors rounded-full p-3 text-white z-50 shadow-lg hover:shadow-xl"
+                                aria-label="Previous image"
+                            >
+                                <IoArrowBack size={28} />
+                            </button>
+                        )}
+                        {selectedImage < product?.images?.length - 1 && (
+                            <button
+                                onClick={handleNext}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 bg-green-600/80 hover:bg-green-700 transition-colors rounded-full p-3 text-white z-50 shadow-lg hover:shadow-xl"
+                                aria-label="Next image"
+                            >
+                                <IoArrowForward size={28} />
+                            </button>
+                        )}
                     </div>
 
                     <div className="grid grid-cols-4 gap-4">
