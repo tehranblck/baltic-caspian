@@ -207,7 +207,7 @@ export const productDetailTranslations = {
 
 export const homeTranslations = {
     az: {
-        heroTitle: "XƏYALINIZDAKİ TAXTA EVLƏR",
+        heroTitle: "XƏYALINIZDAKI TAXTA EVLƏR",
         heroSubtitle: "Təbiətlə harmoniyada yaşamaq üçün ən yaxşı seçim!",
         viewProducts: "Məhsullarımız",
         contactUs: "Bizimlə Əlaqə",
